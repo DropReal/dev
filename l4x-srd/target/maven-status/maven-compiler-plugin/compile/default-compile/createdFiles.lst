@@ -1,0 +1,6 @@
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\AbstractComputeRuleAdapter.class
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\CustomJudgeExecutorAdapter.class
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\AbstractJudgeRuleAdapter.class
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\SceneMatcherAdapter.class
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\GroupJudgeExecutorAdapter.class
+com\ai\aif\log4x\agent\trans\adapter\impl\rulecenter\RuleCheckAbstractServiceAdapter.class

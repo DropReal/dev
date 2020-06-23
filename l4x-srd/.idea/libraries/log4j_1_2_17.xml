@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="log4j-1.2.17">
+    <CLASSES>
+      <root url="jar://E:/workspace-yunnan/dev/library/appframe/log4j-1.2.17.jar!/" />
+      <root url="jar://E:/workspace-yunnan/dev/library/appframe/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://E:/workspace-yunnan/yunnan-kr/RuleCenter/agent/log4x-agent.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
