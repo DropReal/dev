@@ -71,6 +71,6 @@ public class SceneMatcherAdapter extends AbsJavassistSwitchAdapter {
     public String[] getInjectedMethodHeaders() {
         // TODO Auto-generated method stub
         return new String[] {
-                "public static java.util.List/*<com.ai.rule.engine.scene.interfaces.IScene>*/ match(com.ai.rule.common.data.interfaces.IFastMap tenantParam,java.util.Map featureMap,boolean isTestStaffId)"};
+                "public static java.util.List/*<com.ai.rule.engine.scene.interfaces.IScene>*/ match(com.ai.rule.common.data.interfaces.IFastMap tenantParam,com.ai.rule.common.data.interfaces.IFastMap featureMap,boolean isTestStaffId)"};
     }
 }
