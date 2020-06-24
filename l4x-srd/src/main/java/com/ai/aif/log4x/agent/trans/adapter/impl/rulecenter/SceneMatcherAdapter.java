@@ -13,10 +13,11 @@ public class SceneMatcherAdapter extends AbsJavassistSwitchAdapter {
         WrappedStringBuilder buf = new WrappedStringBuilder();
         buf.appendln("if(featureJson.containsKey(\"traceId\")) {");
         buf.appendln("com.ai.aif.log4x.message.format.Trace trace = com.ai.aif.log4x.Log4xManager.client().getCurrentTrace();");
-        buf.appendln("com.alibaba.fastjson.JSONArray json = (com.alibaba.fastjson.JSONArray) com.alibaba.fastjson.JSON.toJSON("+arg2+");");
-        buf.appendln("trace.setRespBody(json==null?\"\":json.toJSONString());");
-        buf.appendln("com.ai.aif.log4x.Log4xManager.client().finishTrace(true);");
+        buf.appendln("java.lang.Object sceneList = com.alibaba.fastjson.JSON.toJSON("+arg2+");");
+        buf.appendln("if(sceneList!=null){com.alibaba.fastjson.JSONArray json = (com.alibaba.fastjson.JSONArray) sceneList;");
+        buf.appendln("trace.setRespBody(json.toJSONString());}");
         buf.appendln("}");
+        buf.appendln("com.ai.aif.log4x.Log4xManager.client().finishTrace(true);");
         return buf.toString();
     }
 
