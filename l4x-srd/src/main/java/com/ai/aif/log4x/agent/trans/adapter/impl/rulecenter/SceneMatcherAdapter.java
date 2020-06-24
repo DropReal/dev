@@ -16,8 +16,9 @@ public class SceneMatcherAdapter extends AbsJavassistSwitchAdapter {
         buf.appendln("java.lang.Object sceneList = com.alibaba.fastjson.JSON.toJSON("+arg2+");");
         buf.appendln("if(sceneList!=null){com.alibaba.fastjson.JSONArray json = (com.alibaba.fastjson.JSONArray) sceneList;");
         buf.appendln("trace.setRespBody(json.toJSONString());}");
-        buf.appendln("}");
         buf.appendln("com.ai.aif.log4x.Log4xManager.client().finishTrace(true);");
+        buf.appendln("}");
+
         return buf.toString();
     }
 
