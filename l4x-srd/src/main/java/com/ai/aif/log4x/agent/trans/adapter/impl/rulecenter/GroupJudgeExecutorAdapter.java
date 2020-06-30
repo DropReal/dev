@@ -55,6 +55,6 @@ public class GroupJudgeExecutorAdapter extends AbsJavassistSwitchAdapter {
     @Override
     public String[] getInjectedMethodHeaders() {
         // TODO Auto-generated method stub
-        return new String[] { "protected com.ai.rule.engine.result.interfaces.IRuleMsg judge(com.ai.rule.engine.rule.define.interfaces.AbstractRule rule,com.ai.rule.engine.fact.interfaces.IRequestFact requestFact)" };
+        return new String[] { "protected com.ai.rule.engine.result.interfaces.IRuleMsg judge(com.ai.rule.engine.rule.define.interfaces.AbstractRule rule,com.ai.rule.engine.fact.handler.interfaces.IFactHandler factHandler)" };
     }
 }
