@@ -21,7 +21,7 @@ public class GroupJudgeExecutorAdapter extends AbsJavassistSwitchAdapter {
     public String addBeforeInvoke(CtMethod ctMethod) {
         // TODO Auto-generated method stub
         WrappedStringBuilder buf = new WrappedStringBuilder();
-        buf.appendln("com.ai.rule.engine.fact.interfaces.IRequestFact fact_ = $2;");
+        buf.appendln("com.ai.rule.engine.fact.interfaces.IRequestFact fact_ = $2.getRequestFact();");
         buf.appendln("java.lang.String traceContext = fact_.getTraceContext();");
         buf.appendln("if(traceContext != null && traceContext.length() > 0){com.ai.aif.log4x.Log4xManager.client().resetTraceContext(traceContext);}");
         buf.appendln("com.ai.aif.log4x.message.format.Trace trace = com.ai.aif.log4x.Log4xManager.client().getTrace();");
