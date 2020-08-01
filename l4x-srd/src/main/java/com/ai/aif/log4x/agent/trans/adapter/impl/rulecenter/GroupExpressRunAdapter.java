@@ -21,9 +21,9 @@ public class GroupExpressRunAdapter extends AbsJavassistSwitchAdapter {
     public String addBeforeInvoke(CtMethod ctMethod) {
         // TODO Auto-generated method stub
         WrappedStringBuilder buf = new WrappedStringBuilder();
-        buf.appendln("com.ai.rule.engine.fact.interfaces.IRequestFact fact_ = com.ai.rule.engine.execute.javabean.group.context.GroupExecutorContext.getFactHandler().getRequestFact();");
-        buf.appendln("java.lang.String traceContext = fact_.getTraceContext();");
-        buf.appendln("if(traceContext != null && traceContext.length() > 0){com.ai.aif.log4x.Log4xManager.client().resetTraceContext(traceContext);}");
+        buf.appendln("com.ai.rule.engine.fact.interfaces.IRequestFact fact_ = com.ai.rule.engine.execute.ql.engine.context.GroupExecutorContext.getFactHandler().getRequestFact();");
+//        buf.appendln("java.lang.String traceContext = fact_.getTraceContext();");
+//        buf.appendln("if(traceContext != null && traceContext.length() > 0){com.ai.aif.log4x.Log4xManager.client().resetTraceContext(traceContext);}");
         buf.appendln("com.ai.aif.log4x.message.format.Trace trace = com.ai.aif.log4x.Log4xManager.client().getTrace();");
         buf.appendln("trace.setServiceName($0.getClass().getName() + \"." + ctMethod.getName() + "\");");
         buf.appendln("trace.setCallType(\"RULECENTER_GROUP_RUN\");");
